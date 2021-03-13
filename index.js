@@ -11,7 +11,7 @@ const server = restify.createServer();
 // };
 
 server.use(restify.plugins.bodyParser());
-server.use(cors({ origin: "http://96.231.216.97" }));
+server.use(cors({ origin: "http://96.231.216.97:8080" }));
 
 server.listen(config.PORT, () => {
   mongoose.set("useFindAndModify", false);
