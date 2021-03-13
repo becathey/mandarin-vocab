@@ -5,17 +5,13 @@ const config = require("./config/keys");
 
 const server = restify.createServer();
 
-// const corsOptions = {
-//   origin: "96.231.216.97:8080",
-//   optionsSuccessStatus: 200,
-// };
+const corsOptions = {
+  origin: "http://96.231.216.97:8080",
+  optionsSuccessStatus: 200,
+};
 
 server.use(restify.plugins.bodyParser());
-server.use(
-  cors({
-    origin: "http://96.231.216.97:8080",
-  })
-);
+server.use(cors(corsOptions));
 
 server.listen(config.PORT, () => {
   mongoose.set("useFindAndModify", false);
