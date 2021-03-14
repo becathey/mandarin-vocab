@@ -22,11 +22,10 @@ server.use(restify.plugins.bodyParser());
 // });
 server.use(
   cors({
-    origin: function(origin, callback) {
-      callback(null, true);
-    },
+    methods: "GET",
   })
 );
+server.options("/words", cors());
 
 server.listen(config.PORT, () => {
   mongoose.set("useFindAndModify", false);
