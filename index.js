@@ -13,19 +13,16 @@ const server = restify.createServer();
 server.use(restify.plugins.bodyParser());
 // server.use(cors({ origin: "http://96.231.216.97:8080" }));
 // server.use(cors());
-// server.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "http://96.231.216.97:8080");
-//   res.header("Access-Control-Allow-Credentials", true);
-//   res.header("Access-Control-Allow-Methods", "GET");
-//   res.header("Access-Control-Allow-Headers", "Content-Type");
-//   next();
-// });
-server.use(
-  cors({
-    methods: "GET",
-  })
-);
-server.options("/words", cors());
+server.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://96.231.216.97:8080");
+  //   res.header("Access-Control-Allow-Credentials", true);
+  //   res.header("Access-Control-Allow-Methods", "GET");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 server.listen(config.PORT, () => {
   mongoose.set("useFindAndModify", false);
