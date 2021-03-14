@@ -5,7 +5,7 @@ const config = require("../config/keys");
 
 module.exports = (server) => {
   server.get("/words", async (req, res, next) => {
-    response.set("Access-Control-Allow-Origin", "*");
+    res.set("Access-Control-Allow-Origin", "*");
     try {
       const words = await Word.find({});
       res.send(words);
