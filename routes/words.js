@@ -7,7 +7,6 @@ module.exports = (server) => {
   server.get("/words", async (req, res, next) => {
     try {
       const words = await Word.find({});
-      res.set("Access-Control-Allow-Origin", "*");
       res.send(words);
       next();
     } catch (err) {
