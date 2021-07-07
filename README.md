@@ -1,2 +1,2 @@
-# mandarin-vocab
+# Mandarin-English
 Mandarin-English Vocabulary API
