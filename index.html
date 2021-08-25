@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandarin Vocabulary API</title>
+  </head>
+  <body>
+    <h1>Mandarin Vocabulary API</h1>
+    <p>
+      Mandarin Vocabulary API is a REST API built with Node.js and Restify for
+      retrieving Mandarin vocabulary words.
+    </p>
+
+    <h2>Base URL</h2>
+    <p>https://mandarin-english.herokuapp.com</p>
+
+    <h2>Get Words</h2>
+    <p>Retrieve a list of Mandarin vocabulary words.</p>
+    <h3>Endpoint</h3>
+    <p><code>GET /words</code></p>
+    <h3>Example Request</h3>
+    <p>https://mandarin-english.herokuapp.com/words</p>
+    <h3>Example Response</h3>
+    <pre>
+[
+    {
+        "_id": "6042f4c0476e3b42b249b265",
+        "mandarin": "一",
+        "pinyin": "yī",
+        "english": "one",
+        "wordId": 2,
+        "updatedAt": "2021-03-06T03:19:28.351Z",
+        "createdAt": "2021-03-06T03:19:28.351Z",
+        "__v": 0
+    },
+    {
+        "_id": "6042f521476e3b42b249b266",
+        "mandarin": "是",
+        "pinyin": "shì",
+        "english": "be",
+        "wordId": 4,
+        "updatedAt": "2021-03-06T03:21:05.303Z",
+        "createdAt": "2021-03-06T03:21:05.303Z",
+        "__v": 0
+    },
+    {
+        "_id": "6042f55c476e3b42b249b267",
+        "mandarin": "我",
+        "pinyin": "wǒ",
+        "english": "I",
+        "wordId": 5,
+        "updatedAt": "2021-03-06T03:22:04.801Z",
+        "createdAt": "2021-03-06T03:22:04.801Z",
+        "__v": 0
+    },
+    …
+]
+    </pre>
+
+    <h2>Get Single Word</h2>
+    <p>Retrieve a single Mandarin vocabulary word by ID.</p>
+
+    <h3>Endpoint</h3>
+    <p>GET /words/:id</p>
+
+    <h3>Example Request</h3>
+    <p>
+      GET https://mandarin-english.heroku.com/words/604aea0d920f3700153d06c1
+    </p>
+
+    <h3>Example Response</h3>
+    <pre>
+{
+    "_id": "604aea0d920f3700153d06c1",
+    "mandarin": "学",
+    "pinyin": "xué",
+    "english": "study",
+    "wordId": 50,
+    "updatedAt": "2021-03-12T04:11:57.621Z",
+    "createdAt": "2021-03-12T04:11:57.621Z",
+    "__v": 0
+}
+    </pre>
+  </body>
+</html>
