@@ -62,7 +62,7 @@ GET /words/:id
 
 ```
 {
-    "_id": "604aea0d920f3700153d06c1",
+    "_id": "604aea0d920f3700153d34a7",
     "mandarin": "学",
     "pinyin": "xué",
     "english": "study",
