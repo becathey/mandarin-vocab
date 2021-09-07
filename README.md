@@ -1,6 +1,6 @@
-# Mandarin-English
+# Mandarin Vocabulary API
 
-Mandarin-English Vocabulary API is a REST API built with Node.js and Restify for retrieving Mandarin vocabulary words. It uses JSON Web Tokens for authentication and authorization.
+Mandarin Vocabulary API is a REST API built with Node.js and Restify for studying Mandarin vocabulary. It uses JSON Web Tokens for authentication and authorization.
 
 ## Project Setup
 
